@@ -1,0 +1,16 @@
+{
+    "name": "jgile/laravel-helpers",
+    "description": "Laravel helpers I find userful",
+    "authors": [
+        {
+            "name": "John Gile",
+            "email": "me@jgile.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "require": {}
+}
