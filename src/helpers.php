@@ -19,6 +19,13 @@ if (class_exists('\Laravel\Cashier\Cashier')) {
     }
 }
 
+if(!function_exists('user')) {
+    function user()
+    {
+        return auth()->user();
+    }
+}
+
 if (!function_exists('number_format_short')) {
     function number_format_short($n, $precision = 1)
     {
