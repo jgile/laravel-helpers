@@ -1,6 +1,6 @@
 {
     "name": "jgile/laravel-helpers",
-    "description": "Laravel helpers I find userful",
+    "description": "Laravel helpers I find useful",
     "authors": [
         {
             "name": "John Gile",
@@ -12,5 +12,7 @@
             "src/helpers.php"
         ]
     },
-    "require": {}
+    "require": {
+        "spatie/laravel-package-tools": "^1.7"
+    }
 }

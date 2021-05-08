@@ -10,8 +10,8 @@ if (!function_exists('carbon')) {
     }
 }
 
-if (class_exists('\Laravel\Cashier\Cashier')) {
-    if (!function_exists('money')) {
+if (!function_exists('money')) {
+    if (class_exists('\Laravel\Cashier\Cashier')) {
         function money($amount, $currency = null, $locale = null)
         {
             return Cashier::formatAmount(round($amount, 2) * 100, $currency, $locale);
@@ -19,7 +19,7 @@ if (class_exists('\Laravel\Cashier\Cashier')) {
     }
 }
 
-if(!function_exists('user')) {
+if (!function_exists('user')) {
     function user()
     {
         return auth()->user();
@@ -60,7 +60,8 @@ if (!function_exists('number_format_short')) {
     }
 }
 if (!function_exists('isJSON')) {
-    function isJSON($string){
+    function isJSON($string)
+    {
         return is_string($string) && is_array(json_decode($string, true)) ? true : false;
     }
 }
